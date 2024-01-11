@@ -22,9 +22,11 @@ public class City {
 	
 	@Column(name ="population")
 	private int population;
+
+	public City() {}
 	
 	public City(int id, String name, String countryCode, String district, int population) {
-		super();
+		
 		this.id = id;
 		this.name = name;
 		this.countryCode = countryCode;
@@ -71,6 +73,7 @@ public class City {
 	public void setPopulation(int population) {
 		this.population = population;
 	}
+	
 	
 	
 }

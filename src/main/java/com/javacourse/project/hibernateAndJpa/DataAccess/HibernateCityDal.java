@@ -5,16 +5,16 @@ import java.util.List;
 import org.hibernate.Session;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.javacourse.project.hibernateAndJpa.Entities.City;
 
-import jakarta.persistence.EntityManager;
-
+import jakarta.persistence.*;
 
 
 //JPA - ORM
+@Repository
 public class HibernateCityDal implements ICityDal{
 
 	private EntityManager entityManager;
