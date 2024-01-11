@@ -31,6 +31,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+			<dependency>
+			    <groupId>org.n52.sensorweb-server.sos</groupId>
+			    <artifactId>sos-hibernate-session-factory</artifactId>
+			    <version>6.0.1</version>
+			</dependency>
+
 	</dependencies>
 
 	<build>
