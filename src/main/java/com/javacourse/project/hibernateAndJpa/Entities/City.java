@@ -1,37 +1,43 @@
 package com.javacourse.project.hibernateAndJpa.Entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "city")
 public class City {
-	
+
 	@Id
 	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	
-	@Column(name ="name")
+
+	@Column(name = "name")
 	private String name;
-	
-	@Column(name ="countryCode")
+
+	@Column(name = "countrycode")
 	private String countryCode;
-	
-	@Column(name ="district")
+
+	@Column(name = "district")
 	private String district;
-	
-	@Column(name ="population")
+
+	@Column(name = "population")
 	private int population;
 
-	public City() {}
-	
 	public City(int id, String name, String countryCode, String district, int population) {
-		
+
 		this.id = id;
 		this.name = name;
 		this.countryCode = countryCode;
 		this.district = district;
 		this.population = population;
+	}
+
+	public City() {
 	}
 
 	public int getId() {
@@ -73,7 +79,5 @@ public class City {
 	public void setPopulation(int population) {
 		this.population = population;
 	}
-	
-	
-	
+
 }
